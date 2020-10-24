@@ -12,13 +12,13 @@ let duck = {
 //1. Using dot notation to access the duck's "name" property.
 // let accessByDotNotation = duck."name"
 // let accessByDotNotation = Object[duck].name
-// let accessByDotNotation = duck.name
+let accessByDotNotation = duck.name
 
 //2. Using bracket notation to access duck's "bites" property.
 // let accessByBracketNotation = duck{"bites"}
 // let accessByBracketNotation = Object[duck][bites]
 // let accessByBracketNotation = duck[bites]
-// let accessByBracketNotation = duck['bites']
+let accessByBracketNotation = duck['bites']
 // let accessByBracketNotation = duck(bites)
 
 ///////////////////Problem 2///////////////////
@@ -31,6 +31,9 @@ let person = {
   name: 'Ella',
   city: 'Edinburgh',
   job: 'Leader of Ghost Tours',
+  moveCities: function(city){
+    person.city = city;
+  }
 }
 
 //CODE HERE
@@ -46,7 +49,7 @@ let doors = {
   green: 'pine',
   brown: 'mahogany',
 }
-
+const doorKeys = Object.keys(doors)
 //Code here
 
 //////////////////PROBLEM 4////////////////////
@@ -263,7 +266,7 @@ function denver(color, weather) {
 
 //What will seattle() return? Uncomment the correct answer.
 
-// let seattleWeather = "The sky is purple and it is stormy."
+let seattleWeather = "The sky is purple and it is stormy."
 // let seattleWeather = "The sky is grey and it is foggy."
 // let seattleWeather = "The sky is undefined and it is undefined."
 
@@ -279,7 +282,7 @@ function denver(color, weather) {
 // let denverWeather = "The sky is purple and it is stormy."
 // let denverWeather = "The sky is iron grey and it is rainy."
 // let denverWeather = "The sky is grey and it is foggy."
-// let denverWeather = "The sky is undefined and it is undefined."
+let denverWeather = "The sky is undefined and it is undefined."
 
 //What will denver("blue", "sunny") return? Uncomment the correct answer.
 

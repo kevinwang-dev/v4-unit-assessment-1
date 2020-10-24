@@ -21,7 +21,9 @@ try {
 //Create a function called hey, using a function
 //declaration. hey should take in a 'name' parameter, and return
 //the string "Hey " plus the name.
-
+function hey(name){
+  return `Hey ${name}`
+}
 //Code here
 
 ///////////////////Problem 2//////////////////
@@ -30,13 +32,16 @@ try {
 //the string "Hi " plus the name.
 
 //Code here
-
+const hi = function(name){
+  return `Hi ${name}`
+}
 ///////////////////Problem 3//////////////////
 //Create a function called hello, using an arrow
 //function. hello should take in a 'name' parameter, and return
 //the string "Hello " plus the name.
 
 //Code here
+const hello = name => `Hello ${name}`
 
 ///////////////////Problem 4//////////////////
 //Create a function named fun, which takes in
@@ -46,6 +51,10 @@ try {
 //variable called funTimes.
 
 //Code here
+function fun(string){
+  return `${string}!!!!!`
+}
+const funTimes = fun('Yay')
 
 //////////////////PROBLEM 5////////////////////
 
@@ -56,7 +65,13 @@ try {
 //should return the SECOND callback param invoked.
 
 //Code here
-
+function invokesCallbacks(number, func1, fucn2){
+  if(number > 10){
+    return func1();
+  } else {
+    return fucn2();
+  }
+}
 //////////////////PROBLEM 6////////////////////
 
 //Within the function timedGreeting below, create a setTimeout (a native javascript method) that assigns the result of invoking the callback parameter to the variable greeting, after 1 second.  If you don't know how to use setTimeout you can find information here: https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout
@@ -73,6 +88,11 @@ let greeting
 function addNumbers(value) {
   var myNumbers = []
   //Code here
+  let newValue = value.pop()
+  for(let i = 0; i < newValue.length; i++){
+    myNumbers.push(newValue[i])
+  }
+  return myNumbers
 }
 
 //////////////////PROBLEM 8////////////////////
@@ -96,4 +116,8 @@ function backwardsGreeting(arr) {
 
 function leapFrog(arr) {
   //Code here
+  for(let i = 0; i< arr.length; i+=2){
+    arr[i] + 'frog';
+  }
+  return arr;
 }
