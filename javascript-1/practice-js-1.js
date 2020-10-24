@@ -94,8 +94,8 @@ colorCopy = colorCopy.push('pink');
 const numbers = [1, 2, 3, 4, 5]
 
 //CODE HERE
-const middleNums = numbers.slice()
-middleNums = middleNums.splice(1,3);
+const middleNums = numbers.splice(1,3)
+
 //////////////////PROBLEM 11////////////////////
 /*
   Create an object called 'me' that has the following keys: 
@@ -116,7 +116,7 @@ const me = {
   state: 'California',
   age: 30,
   greeter: function(){
-    returns `Hello! My name is ${this.name} and I live in ${this.state}`
+    returns `Hello! My name is ${me.firstName} and I live in ${me.state}`
   }
 }
 
@@ -134,6 +134,18 @@ const me = {
 */
 
 // CODE HERE
+function bigOrSmall(arr){
+  const answers = [];
+  for(let i = 0; i < arr.length; i++){
+    let eachNumber = arr[i];
+    if(eachNumber > 100){
+      answers.push('big');
+    } else {
+      answers.push('small');
+    }
+  }
+  return answers;
+}
 
 //////////////////PROBLEM 13////////////////////
 /* 
@@ -146,6 +158,14 @@ const me = {
 */
 
 //CODE HERE
+function arrayReverser(arr){
+  const reversed = [];
+  for(let i = arr.length - 1; i >= 0; i--){
+    let eachNumber = arr[i];
+    reversed.push(eachNumber);
+  }
+  return reversed;
+}
 
 //////////////////PROBLEM 14////////////////////
 
@@ -174,13 +194,13 @@ function secondFunction() {
 let globalScope = ['global', 'inner', 'outer', 'functional']
 
 //This array should contain the variable names (as strings) accessible in the firstFunction function.
-let firstFunctionScope = ['global', 'inner', 'outer', 'functional']
+let firstFunctionScope = ['global','functional']
 
 //This array should contain the variable names (as strings) accessible in the innerFunction function.
-let innerFunctionScope = ['global', 'inner', 'outer', 'functional']
+let innerFunctionScope = ['functional', 'global']
 
 //This array should contain the variable names (as strings) accessible in the secondFunction function.
-let secondFunctionScope = ['global', 'inner', 'outer', 'functional']
+let secondFunctionScope = ['functional', 'global']
 
 
 //////////////////PROBLEM 15////////////////////
@@ -190,6 +210,10 @@ let secondFunctionScope = ['global', 'inner', 'outer', 'functional']
 */
 
 //CODE HERE
+function firstItem(array, func){
+  let firstElement = array[0];
+  func(firstElement);
+}
 
 //////////////////PROBLEM 16////////////////////
 /* 
@@ -200,6 +224,13 @@ let secondFunctionScope = ['global', 'inner', 'outer', 'functional']
 */
 
 //CODE HERE
+function isItBob(obj, func){
+  if(obj.name === 'Bob'){
+    func(true);
+  } else {
+    func(false);
+  }
+}
 
 //////////////////PROBLEM 17////////////////////
 /*
@@ -208,7 +239,13 @@ let secondFunctionScope = ['global', 'inner', 'outer', 'functional']
 */
 
 //CODE HERE
-
+function giveMeDoubles(array, func){
+  let result = []
+  for(let i = 0; i < array.length; i++){
+    result.push(array[i] * 2);
+  }
+  func(result);
+}
 //////////////////PROBLEM 18////////////////////
 /*
   Write a function called carFactory that takes in three arguments: a make, model, and year.  
