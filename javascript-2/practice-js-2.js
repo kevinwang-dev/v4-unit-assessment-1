@@ -10,7 +10,7 @@
 */
 
 //CODE HERE
-
+const gitDefinition = 'Git is a version control software that tracks your files in your local system';
 //////////////////PROBLEM 2////////////////////
 /*
     Create a variable called 'gitHubDefinition'.  
@@ -18,6 +18,7 @@
 */
 
 //CODE HERE
+const gitHubDefinition = 'Github is a remote location in the cloud that you can backup your files that are tracked by git and serves as a copy of your files'
 
 //////////////////PROBLEMS 3 - 9////////////////////
 /*
@@ -34,6 +35,10 @@
 */
 
 //CODE HERE
+const init = {
+    description: 'intialize the work directory where you want git to start tracking files',
+    code: 'git init'
+}
 
 //////////////////PROBLEM 4////////////////////
 /*
@@ -42,6 +47,10 @@
 */
 
 //CODE HERE
+const clone = {
+    description: 'After copying the url from a forked repo, git clone with take the files on Github and clone to your local directory',
+    code: 'git clone'
+}
 
 //////////////////PROBLEM 5////////////////////
 /*
@@ -50,7 +59,10 @@
 */
 
 //CODE HERE
-
+const status = {
+    description: 'status shows the status of the files such as being tracked or untracked in different colors for indication',
+    code: 'git status'
+}
 //////////////////PROBLEM 6////////////////////
 /*
     Create an object called 'add' with 'description' and 'code' properties 
@@ -58,6 +70,10 @@
 */
 
 //CODE HERE
+const add = {
+    description: 'add will add specific file or all files in the directory for git to start tracking or changes made to files',
+    code: 'git add'
+}
 
 //////////////////PROBLEM 7////////////////////
 /*
@@ -66,6 +82,10 @@
 */
 
 //CODE HERE
+const commit = {
+    description: 'commit is like a snapshot of the files and create a version of it.',
+    code: 'git commit -m'
+}
 
 //////////////////PROBLEM 8////////////////////
 /*
@@ -74,6 +94,10 @@
 */
 
 //CODE HERE
+const addRemote = {
+    description: 'remote add creates a new remote that points to Github where you can then push your work to Github',
+    code: 'git remote add origin',
+}
 
 //////////////////PROBLEM 9////////////////////
 /*
@@ -82,3 +106,7 @@
 */
 
 //CODE HERE
+const push = {
+    description: 'the push command uploads your local repo to a remote repo like Github.',
+    code: 'git push'
+}
