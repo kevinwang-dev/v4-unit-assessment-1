@@ -83,7 +83,7 @@ const colorCopy = faveColors.slice();
 /* Add a fourth color to the end of the 'colorCopy' array using the push method. */
 
 //CODE HERE
-colorCopy = colorCopy.push('pink');
+colorCopy.push('pink');
 
 //////////////////PROBLEM 10////////////////////
 /*
@@ -110,15 +110,17 @@ const middleNums = numbers.splice(1,3)
   For example: 'Hello! My name is Joseph and I live in Utah"
 */
 
-//CODE HERE
 const me = {
   firstName: 'Kevin',
   state: 'California',
   age: 30,
   greeter: function(){
-    returns `Hello! My name is ${me.firstName} and I live in ${me.state}`
+    return `Hello! My name is ${me.firstName} and I live in ${me.state}`
   }
 }
+
+//CODE HERE
+
 
 //////////////////PROBLEM 12////////////////////
 /* 
@@ -191,13 +193,13 @@ function secondFunction() {
 */
 
 //This array should contain the variable names (as strings) accessible in the global scope.
-let globalScope = ['global', 'inner', 'outer', 'functional']
+let globalScope = ['global']
 
 //This array should contain the variable names (as strings) accessible in the firstFunction function.
-let firstFunctionScope = ['global','functional']
+let firstFunctionScope = ['outer', 'global']
 
 //This array should contain the variable names (as strings) accessible in the innerFunction function.
-let innerFunctionScope = ['functional', 'global']
+let innerFunctionScope = ['inner', 'global', 'outer']
 
 //This array should contain the variable names (as strings) accessible in the secondFunction function.
 let secondFunctionScope = ['functional', 'global']
@@ -255,3 +257,12 @@ function giveMeDoubles(array, func){
 */
 
 //CODE HERE
+function carFactory(make, model, year){
+  const car = {
+    make: make,
+    model: model,
+    year: year
+  }
+  car.year > 2018 ? car.isNew = true : car.isNew = false;
+  return car;
+}
