@@ -130,6 +130,11 @@ section{
 
 .inner-circle-2 > h3{
     margin-top: 120px;
-    color: white
+    color: white;
+    display: inline-block;
+}
+
+.carrot{
+    margin-left: 40px;
 }
 
